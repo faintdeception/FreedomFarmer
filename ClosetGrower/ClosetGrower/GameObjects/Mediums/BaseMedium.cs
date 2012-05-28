@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ClosetGrower.Enums;
 
-namespace ClosetGrower.GameObjects
+namespace ClosetGrower.GameObjects.Mediums
 {
-    class GrowMedium
+    class BaseMedium
     {
         public GrowMediumType Type { get; set; }
         public double Ph { get; set; }

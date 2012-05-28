@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using ClosetGrower.GameObjects.Pots;
 using Microsoft.Xna.Framework;
 
-namespace ClosetGrower.GameObjects
+namespace ClosetGrower.GameObjects.Pots
 {
     /// <summary>
     /// Clay Pots absorb a litte bit of moisture out of the grow medium every day, and then evaporate it into the air.
     /// </summary>
-    class ClayPot : Pot
+    class ClayPot : BasePot
     {
 
         //const double MOISTUREABSORBTIONRATE = .005;

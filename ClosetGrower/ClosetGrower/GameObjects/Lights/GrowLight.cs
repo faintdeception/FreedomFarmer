@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace ClosetGrower.GameObjects
+namespace ClosetGrower.GameObjects.Lights
 {
-    class GrowSlot : BaseGameObject
+    class BaseLight : BaseGameObject
     {
-         public GrowSlot(Game game)
+         public BaseLight(Game game)
             : base(game)
         {
             // TODO: Construct any child components here

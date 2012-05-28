@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
-using ClosetGrower.Enums;
 using System.ComponentModel;
+using ClosetGrower.Enums;
+using ClosetGrower.GameObjects.Plants;
+using Microsoft.Xna.Framework;
 
-namespace ClosetGrower.GameObjects
+namespace ClosetGrower.GameObjects.Seeds
 {
     public delegate void GerminatedEventHandler(object sender, SeedGerminatedEventArgs e);
 
     class PlantedSeedObject : VisualGameObject
     {
-        public PlantedSeedObject(Game game, PlantObject plant)
+        public PlantedSeedObject(Game game, BasePlant plant)
             : base(game)
         {
             this.Plant = plant;
@@ -68,7 +66,7 @@ namespace ClosetGrower.GameObjects
         /// <summary>
         /// The type of plant this seed is supposed to grow into.
         /// </summary>       
-        public PlantObject Plant { get; set; }
+        public BasePlant Plant { get; set; }
 
         /// <summary>
         /// The max the seed can live before it's status changes to dead.  Even shitty seeds can take a really long time to germinate. 

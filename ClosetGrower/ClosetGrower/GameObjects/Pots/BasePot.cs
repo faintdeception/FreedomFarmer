@@ -1,20 +1,20 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
 using System.ComponentModel;
+using ClosetGrower.GameObjects.Mediums;
+using ClosetGrower.GameObjects.Plants;
+using ClosetGrower.GameObjects.Seeds;
+using Microsoft.Xna.Framework;
 
-namespace ClosetGrower.GameObjects
+namespace ClosetGrower.GameObjects.Pots
 {
-    class Pot : VisualGameObject
+    class BasePot : VisualGameObject
     {
-        public GrowMedium Medium { get; set; }
+        public BaseMedium Medium { get; set; }
 
         [DefaultValue(0.000)]
         protected double MoistureAbsorbtionRate { get; set; }
 
-        public Pot(Game game)
+        public BasePot(Game game)
             : base(game)
         {
             ClosetGrow cg = (ClosetGrow)game;
@@ -54,6 +54,6 @@ namespace ClosetGrower.GameObjects
         }
 
         public PlantedSeedObject Seed { get; set; }
-        public PlantObject Plant { get; set; }
+        public BasePlant Plant { get; set; }
     }
 }

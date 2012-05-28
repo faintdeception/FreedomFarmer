@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
 using System.ComponentModel;
+using Microsoft.Xna.Framework;
 
-namespace ClosetGrower.GameObjects
+namespace ClosetGrower.GameObjects.Plants
 {
-    public class PlantObject : VisualGameObject
+    public class BasePlant : VisualGameObject
     {
-        public PlantObject(Game game)
+        public BasePlant(Game game)
             : base(game)
         {
             ClosetGrow cg = (ClosetGrow)game;
@@ -22,12 +19,10 @@ namespace ClosetGrower.GameObjects
         [DefaultValue(0.20)]
         protected double MoistureAbsorbtionRate { get; set; }
 
-        void Game_DayIncrimented(object sender, EventArgs e)
+        public virtual void Game_DayIncrimented(object sender, EventArgs e)
         {
             //The logic for plants is probably going to be pretty complex, but basically it's going to feed, and then it's going to grow.
-            //this.
-
-            
+            //this.            
         }
     }
 }

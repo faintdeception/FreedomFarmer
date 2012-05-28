@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using ClosetGrower.GameObjects.Plants;
 
 namespace ClosetGrower.GameObjects
 {
     public class SeedGerminatedEventArgs : EventArgs
     {
-        public PlantObject Plant { get; set; }
+        public BasePlant Plant { get; set; }
     }
 
 }
