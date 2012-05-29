@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using ClosetGrower.GameObjects.Tools.Seeds;
+using ClosetGrower.GameObjects.Mediums;
+using ClosetGrower.GameObjects.Tools.Mediums;
 
 namespace ClosetGrower
 {
@@ -68,11 +70,14 @@ namespace ClosetGrower
             //Save and load the actual day here.
             this.currentDay = 1;
 
-            ClayPot p = new ClayPot(this);
+            ClayPot myClayPot = new ClayPot(this);
+            PHBalancedSoilTool mySoil = new PHBalancedSoilTool(this);
 
-            WhiteWidowSeedTool wwst = new WhiteWidowSeedTool(this);
+            WhiteWidowSeedTool myWhiteWidowSeedTool = new WhiteWidowSeedTool(this);
 
-            wwst.Use(p);
+            mySoil.Use(myClayPot);
+
+            myWhiteWidowSeedTool.Use(myClayPot);
 
             
 

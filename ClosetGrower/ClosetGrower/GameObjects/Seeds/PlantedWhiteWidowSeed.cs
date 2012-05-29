@@ -11,7 +11,7 @@ namespace ClosetGrower.GameObjects.Seeds
             this.Plant = plant;
             ClosetGrow cg = (ClosetGrow)game;
             this.MoistureAbsorbtionRate = 0.066;
-
+            this.Plant = new WhiteWidowPlant(cg);
             this.MaxAge = 120;
         }        
     }

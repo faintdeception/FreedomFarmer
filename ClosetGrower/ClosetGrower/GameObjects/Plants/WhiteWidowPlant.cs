@@ -8,7 +8,7 @@ namespace ClosetGrower.GameObjects.Plants
         public WhiteWidowPlant(Game game)
             : base(game)
         {
-            this.MoistureAbsorbtionRate = .65;
+            this.MoistureAbsorbtionRate = .08;
         }
 
         public override void Game_DayIncrimented(object sender, EventArgs e)

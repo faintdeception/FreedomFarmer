@@ -70,6 +70,7 @@
     <Compile Include="Accelerometer.cs" />
     <Compile Include="Enums\SeedStatus.cs" />
     <Compile Include="Enums\SoilType.cs" />
+    <Compile Include="GameObjects\Mediums\PHBalancedSoil.cs" />
     <Compile Include="GameObjects\Plants\WhiteWidowPlant.cs" />
     <Compile Include="GameObjects\Pots\ClayPot.cs" />
     <Compile Include="GameObjects\Mediums\BaseMedium.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="GameObjects\SeedGerminatedEventArgs.cs" />
     <Compile Include="GameObjects\Seeds\PlantedWhiteWidowSeed.cs" />
     <Compile Include="GameObjects\Tools\BaseTool.cs" />
+    <Compile Include="GameObjects\Tools\Mediums\BaseMediumTool.cs" />
+    <Compile Include="GameObjects\Tools\Mediums\PHBalancedSoilTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\BaseSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\LaughingBuddhaSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\WhiteWidowSeedTool.cs" />

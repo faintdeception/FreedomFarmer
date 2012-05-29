@@ -17,7 +17,7 @@ namespace ClosetGrower.GameObjects.Plants
         /// How much water does the plant absorb every day?  20%
         /// </summary>
         [DefaultValue(0.20)]
-        protected double MoistureAbsorbtionRate { get; set; }
+        public double MoistureAbsorbtionRate { get; set; }
 
         public virtual void Game_DayIncrimented(object sender, EventArgs e)
         {

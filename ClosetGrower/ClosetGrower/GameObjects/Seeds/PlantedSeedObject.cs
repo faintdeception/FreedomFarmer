@@ -10,20 +10,26 @@ namespace ClosetGrower.GameObjects.Seeds
 
     class PlantedSeedObject : VisualGameObject
     {
+        ClosetGrow cg;
         public PlantedSeedObject(Game game, BasePlant plant)
             : base(game)
         {
             this.Plant = plant;
-            ClosetGrow cg = (ClosetGrow)game;
+            cg = (ClosetGrow)game;
             cg.DayIncrimented += new DayIncrimentedEventHandler(Game_DayIncrimented);
         }
+
+       
 
         public event GerminatedEventHandler Germinated;
 
         protected virtual void OnGerminated(SeedGerminatedEventArgs e)
         {
             if (Germinated != null)
-                Germinated(this, e);                    
+                Germinated(this, e);
+
+            cg.DayIncrimented -= Game_DayIncrimented;
+            
         }
     
 

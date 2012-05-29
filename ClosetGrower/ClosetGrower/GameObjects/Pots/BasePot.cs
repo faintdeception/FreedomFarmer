@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using ClosetGrower.Enums;
 using ClosetGrower.GameObjects.Mediums;
 using ClosetGrower.GameObjects.Plants;
 using ClosetGrower.GameObjects.Seeds;
@@ -30,19 +31,30 @@ namespace ClosetGrower.GameObjects.Pots
 
                 if (this.Seed != null)
                 {
-                    switch (this.Seed.Status)
-                    {
-                        default:
-                            break;
-                    }
+                    if (this.Seed.Status == SeedStatus.UnGerminated)
+                        this.Medium.Humdity -= this.Seed.MoistureAbsorbtionRate;
+                }
+
+                if (this.Plant != null)
+                {
+                    this.Medium.Humdity -= this.Plant.MoistureAbsorbtionRate;
                 }
             }
 
-            
+
         }
 
-        public void PlantSeed(PlantedSeedObject seed)
+        internal void PlantSeed(PlantedSeedObject seed)
         {
+            if (this.Plant != null)
+                throw new Exception("There is already a plant in this pot.");
+
+            if (this.Seed != null)
+                throw new Exception("There is already a seed in this pot");
+
+            if (this.Medium == null)
+                throw new Exception("You need soil to plant a seed in this pot.");
+
             this.Seed = seed;
             this.Seed.Germinated += new GerminatedEventHandler(Seed_Germinated);
         }
@@ -55,5 +67,12 @@ namespace ClosetGrower.GameObjects.Pots
 
         public PlantedSeedObject Seed { get; set; }
         public BasePlant Plant { get; set; }
+
+        internal void AddGrowMedium(BaseMedium medium)
+        {
+            if(this.Medium != null)
+                throw new Exception("There is already a medium in this pot");
+            this.Medium = medium;
+        }
     }
 }
