@@ -15,9 +15,8 @@ namespace ClosetGrower.GameObjects.Tools.Seeds
 
         public override void Use(BaseGameObject useWithThis)
         {
-            BasePot Pot = useWithThis as BasePot;
-
-            if (Pot == null)
+            base.Use(useWithThis);
+            if (!(useWithThis is BasePot))
             {
                 throw (new Exception("You can only use seeds with pots"));
             }

@@ -19,9 +19,7 @@ namespace ClosetGrower.GameObjects.Tools.Mediums
         {
             base.Use(useWithThis);
 
-            BasePot Pot = useWithThis as BasePot;
-
-            if (Pot == null)
+            if (!(useWithThis is BasePot))
             {
                 throw (new Exception("You can only use grow mediums with pots"));
             }

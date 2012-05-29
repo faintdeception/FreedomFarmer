@@ -16,6 +16,7 @@ namespace ClosetGrower.GameObjects.Tools.Seeds
 
         public override void Use(BaseGameObject useWithThis)
         {
+            base.Use(useWithThis);
             BasePot p = useWithThis as BasePot;
             p.PlantSeed(new PlantedWhiteWidowSeed(this.Game, new WhiteWidowPlant(this.Game)));            
         }
