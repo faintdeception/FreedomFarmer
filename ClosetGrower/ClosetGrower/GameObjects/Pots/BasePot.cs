@@ -74,5 +74,13 @@ namespace ClosetGrower.GameObjects.Pots
                 throw new Exception("There is already a medium in this pot");
             this.Medium = medium;
         }
+
+        internal void Water(double amountOfWaterBeingAdded)
+        {
+            if (this.Medium == null)
+                throw new Exception("There is no medium to add water to");
+
+            this.Medium.Humdity += amountOfWaterBeingAdded;
+        }
     }
 }

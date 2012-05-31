@@ -70,6 +70,7 @@
     <Compile Include="Accelerometer.cs" />
     <Compile Include="Enums\SeedStatus.cs" />
     <Compile Include="Enums\SoilType.cs" />
+    <Compile Include="ExtensionMethods\BaseToolExtensions.cs" />
     <Compile Include="GameObjects\Mediums\PHBalancedSoil.cs" />
     <Compile Include="GameObjects\Plants\WhiteWidowPlant.cs" />
     <Compile Include="GameObjects\Pots\ClayPot.cs" />
@@ -89,7 +90,11 @@
     <Compile Include="GameObjects\Tools\Seeds\BaseSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\LaughingBuddhaSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\WhiteWidowSeedTool.cs" />
+    <Compile Include="GameObjects\WaterSources\BaseWaterSource.cs" />
+    <Compile Include="GameObjects\Tools\WateringTools\EmptySodaBottleTool.cs" />
+    <Compile Include="GameObjects\Tools\WateringTools\BaseWateringTool.cs" />
     <Compile Include="GameObjects\VisualGameObject.cs" />
+    <Compile Include="GameObjects\WaterSources\SinkWaterSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>

@@ -6,6 +6,8 @@ using Microsoft.Xna.Framework.Input;
 using ClosetGrower.GameObjects.Tools.Seeds;
 using ClosetGrower.GameObjects.Mediums;
 using ClosetGrower.GameObjects.Tools.Mediums;
+using ClosetGrower.GameObjects.Tools.WateringTools;
+using ClosetGrower.GameObjects.WaterSources;
 
 namespace ClosetGrower
 {
@@ -70,16 +72,29 @@ namespace ClosetGrower
             //Save and load the actual day here.
             this.currentDay = 1;
 
+            //Create a pot.
+            //Later on we'll have a pot tool that can be used to add a pot to your grow slot.
             ClayPot myClayPot = new ClayPot(this);
+
+            //Create a soil tool.  Going to use ph balanced soil here.
             PHBalancedSoilTool mySoil = new PHBalancedSoilTool(this);
 
+            //Create a white widow seed.
             WhiteWidowSeedTool myWhiteWidowSeedTool = new WhiteWidowSeedTool(this);
+
+            //Create an empty soda bottle tool.  It's a low capacity bottle that dispenses a tiny amount of water.
+            EmptySodaBottleTool myEmptySodaBottle = new EmptySodaBottleTool(this) { RemainingWater = 1.0 };
+
+            //Create a water source, my sink, don't have a purifier yet.
+            SinkWaterSource mySink = new SinkWaterSource(this) { Quality = 0.5 };           
 
             mySoil.Use(myClayPot);
 
             myWhiteWidowSeedTool.Use(myClayPot);
 
-            
+            myEmptySodaBottle.Use(myClayPot);
+
+            myEmptySodaBottle.Use(mySink);            
 
 
             // TODO: use this.Content to load your game content here
