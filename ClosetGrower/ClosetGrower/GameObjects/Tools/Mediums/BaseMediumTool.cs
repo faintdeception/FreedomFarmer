@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using ClosetGrower.GameObjects.Pots;
+using ClosetGrower.Interfaces;
 
 namespace ClosetGrower.GameObjects.Tools.Mediums
 {
-    class BaseMediumTool : BaseTool
+    public class BaseMediumTool : BaseGameObject, IUseableTool
     {
         public BaseMediumTool(Game game)
             : base(game)
@@ -15,10 +16,9 @@ namespace ClosetGrower.GameObjects.Tools.Mediums
 
         }
 
-        public override void Use(BaseGameObject useWithThis)
+        public virtual void Use(BaseGameObject useWithThis)
         {
-            base.Use(useWithThis);
-
+            
             if (!(useWithThis is BasePot))
             {
                 throw (new Exception("You can only use grow mediums with pots"));

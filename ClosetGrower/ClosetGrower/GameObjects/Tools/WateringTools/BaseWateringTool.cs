@@ -2,10 +2,11 @@ using System;
 using ClosetGrower.GameObjects.Pots;
 using Microsoft.Xna.Framework;
 using ClosetGrower.GameObjects.WaterSources;
+using ClosetGrower.Interfaces;
 
 namespace ClosetGrower.GameObjects.Tools.WateringTools
 {
-    public class BaseWateringTool : BaseTool
+    public class BaseWateringTool : BaseGameObject, IUseableTool
     {
         public BaseWateringTool(Game game)
             : base(game)
@@ -23,9 +24,8 @@ namespace ClosetGrower.GameObjects.Tools.WateringTools
         /// </summary>
         public double RemainingWater { get; set; }
 
-        public override void Use(BaseGameObject useWithThis)
+        public virtual void Use(BaseGameObject useWithThis)
         {
-            base.Use(useWithThis);
 
             if (!(useWithThis is BasePot) && !(useWithThis is BaseWaterSource))
             {

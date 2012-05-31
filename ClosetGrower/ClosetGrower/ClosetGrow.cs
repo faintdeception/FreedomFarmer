@@ -86,15 +86,19 @@ namespace ClosetGrower
             EmptySodaBottleTool myEmptySodaBottle = new EmptySodaBottleTool(this) { RemainingWater = 1.0 };
 
             //Create a water source, my sink, don't have a purifier yet.
-            SinkWaterSource mySink = new SinkWaterSource(this) { Quality = 0.5 };           
+            SinkWaterSource mySink = new SinkWaterSource(this) { Quality = 0.5 };
 
+            //Use the soil tool with the pot to add soil to the pot.
             mySoil.Use(myClayPot);
 
+            //Use the seed tool to add the seed to the soil.
             myWhiteWidowSeedTool.Use(myClayPot);
 
+            //Use the empty soda bottle to add water to the soil.
             myEmptySodaBottle.Use(myClayPot);
 
-            myEmptySodaBottle.Use(mySink);            
+            //Use the empty soda bottle tool with the sink to refill it with water.
+            myEmptySodaBottle.Use(mySink);
 
 
             // TODO: use this.Content to load your game content here

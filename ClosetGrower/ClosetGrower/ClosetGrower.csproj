@@ -84,7 +84,8 @@
     <Compile Include="GameObjects\Seeds\PlantedSeedObject.cs" />
     <Compile Include="GameObjects\SeedGerminatedEventArgs.cs" />
     <Compile Include="GameObjects\Seeds\PlantedWhiteWidowSeed.cs" />
-    <Compile Include="GameObjects\Tools\BaseTool.cs" />
+    <Compile Include="GameObjects\Tools\Lights\BaseLightTool.cs" />
+    <Compile Include="GameObjects\Tools\Lights\CompactFlourescentLightStripTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\BaseMediumTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\PHBalancedSoilTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\BaseSeedTool.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="GameObjects\Tools\WateringTools\BaseWateringTool.cs" />
     <Compile Include="GameObjects\VisualGameObject.cs" />
     <Compile Include="GameObjects\WaterSources\SinkWaterSource.cs" />
+    <Compile Include="Interfaces\IUseableTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>

@@ -1,10 +1,11 @@
 using System;
 using ClosetGrower.GameObjects.Pots;
 using Microsoft.Xna.Framework;
+using ClosetGrower.Interfaces;
 
 namespace ClosetGrower.GameObjects.Tools.Seeds
 {
-    public class BaseSeedTool : BaseTool
+    public class BaseSeedTool : BaseGameObject, IUseableTool
     {
 
         public BaseSeedTool(Game game)
@@ -13,9 +14,9 @@ namespace ClosetGrower.GameObjects.Tools.Seeds
 
         }
 
-        public override void Use(BaseGameObject useWithThis)
+        public virtual void Use(BaseGameObject useWithThis)
         {
-            base.Use(useWithThis);
+          
             if (!(useWithThis is BasePot))
             {
                 throw (new Exception("You can only use seeds with pots"));

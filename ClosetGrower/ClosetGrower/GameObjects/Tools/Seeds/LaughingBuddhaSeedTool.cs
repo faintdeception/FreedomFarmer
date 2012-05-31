@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace ClosetGrower.GameObjects.Tools.Seeds
 {
-    public class LaughingBuddhaSeedTool : BaseTool
+    public class LaughingBuddhaSeedTool : BaseSeedTool
     {
         public LaughingBuddhaSeedTool(Game game)
             : base(game)
@@ -16,6 +16,7 @@ namespace ClosetGrower.GameObjects.Tools.Seeds
 
         public override void Use(BaseGameObject useWithThis)
         {
+            base.Use(useWithThis);
             //ToDo: Change this to a laughing buddha seed and plant.
             BasePot p = useWithThis as BasePot;
             p.PlantSeed(new PlantedSeedObject(this.Game, new BasePlant(this.Game)));           

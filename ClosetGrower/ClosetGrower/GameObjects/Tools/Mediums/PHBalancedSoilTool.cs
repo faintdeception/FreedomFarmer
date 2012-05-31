@@ -5,10 +5,11 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using ClosetGrower.GameObjects.Pots;
 using ClosetGrower.GameObjects.Mediums;
+using ClosetGrower.Interfaces;
 
 namespace ClosetGrower.GameObjects.Tools.Mediums
 {
-    public class PHBalancedSoilTool : BaseTool
+    public class PHBalancedSoilTool : BaseMediumTool
     {
         public PHBalancedSoilTool(Game game)
             : base(game)
