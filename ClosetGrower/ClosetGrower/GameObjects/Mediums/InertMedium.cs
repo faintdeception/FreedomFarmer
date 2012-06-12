@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +6,13 @@ using Microsoft.Xna.Framework;
 
 namespace ClosetGrower.GameObjects.Mediums
 {
-    class PHBalancedSoil : BaseMedium
+    public class InertMedium : BaseMedium
     {
-        public PHBalancedSoil(Game game)
+        public InertMedium(Game game)
             : base(game)
         {
-            Ph = 0.5;
             Humdity = 0.0;
+            Ph = 0.0;
         }
     }
 }

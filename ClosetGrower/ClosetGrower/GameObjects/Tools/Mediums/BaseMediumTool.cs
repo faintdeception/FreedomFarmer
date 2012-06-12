@@ -16,6 +16,11 @@ namespace ClosetGrower.GameObjects.Tools.Mediums
 
         }
 
+        /// <summary>
+        /// The PH of the medium tool.
+        /// </summary>
+        public double PH { get; set; }
+
         public virtual void Use(BaseGameObject useWithThis)
         {
             

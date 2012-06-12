@@ -20,6 +20,11 @@ namespace ClosetGrower.GameObjects.Tools.WateringTools
         public double WaterQuality { get; set; }
 
         /// <summary>
+        /// The PH of the water in the tool.
+        /// </summary>
+        public double PH { get; set; }
+
+        /// <summary>
         /// How much water is left in the container?
         /// </summary>
         public double RemainingWater { get; set; }

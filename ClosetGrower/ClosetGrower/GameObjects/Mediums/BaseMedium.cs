@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace ClosetGrower.GameObjects.Mediums
 {
-    class BaseMedium : BaseGameObject
+    public class BaseMedium : BaseGameObject
     {
         public BaseMedium(Game game)
             : base(game)
@@ -11,8 +11,24 @@ namespace ClosetGrower.GameObjects.Mediums
             
         }
 
+        /// <summary>
+        /// What type of medium is it?
+        /// </summary>
         public GrowMediumType Type { get; set; }
+        
+        /// <summary>
+        /// The PH of the medium.
+        /// </summary>
         public double Ph { get; set; }
-        public double Humdity { get; set; }        
+
+        /// <summary>
+        /// How moist is the medium.
+        /// </summary>
+        public double Humdity { get; set; }
+
+        /// <summary>
+        /// What's the nutrient level
+        /// </summary>
+        public double NutritionLevel { get; set; } 
     }
 }

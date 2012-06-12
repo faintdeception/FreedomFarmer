@@ -6,13 +6,13 @@ using Microsoft.Xna.Framework;
 
 namespace ClosetGrower.GameObjects.Mediums
 {
-    class PHBalancedSoil : BaseMedium
+    public class HydroponicMedium : BaseMedium
     {
-        public PHBalancedSoil(Game game)
+        public HydroponicMedium(Game game)
             : base(game)
         {
+            Humdity = 1.0;
             Ph = 0.5;
-            Humdity = 0.0;
         }
     }
 }

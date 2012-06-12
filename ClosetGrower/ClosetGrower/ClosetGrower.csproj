@@ -71,6 +71,8 @@
     <Compile Include="Enums\SeedStatus.cs" />
     <Compile Include="Enums\SoilType.cs" />
     <Compile Include="ExtensionMethods\BaseToolExtensions.cs" />
+    <Compile Include="GameObjects\Mediums\HydroponicMedium.cs" />
+    <Compile Include="GameObjects\Mediums\InertMedium.cs" />
     <Compile Include="GameObjects\Mediums\PHBalancedSoil.cs" />
     <Compile Include="GameObjects\Plants\WhiteWidowPlant.cs" />
     <Compile Include="GameObjects\Pots\ClayPot.cs" />
@@ -87,6 +89,8 @@
     <Compile Include="GameObjects\Tools\Lights\BaseLightTool.cs" />
     <Compile Include="GameObjects\Tools\Lights\CompactFlourescentLightStripTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\BaseMediumTool.cs" />
+    <Compile Include="GameObjects\Tools\Mediums\HydroponicMediumTool.cs" />
+    <Compile Include="GameObjects\Tools\Mediums\Copy of PHBalancedSoilTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\PHBalancedSoilTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\BaseSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\LaughingBuddhaSeedTool.cs" />
