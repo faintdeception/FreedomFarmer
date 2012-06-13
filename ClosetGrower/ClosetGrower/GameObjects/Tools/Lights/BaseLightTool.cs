@@ -24,7 +24,8 @@ namespace ClosetGrower.GameObjects.Tools.Lights
 
         public virtual void Use(BaseGameObject useWithThis)
         {
-            throw new NotImplementedException();
+            //ToDo: Make it so that lights can only be used with the cabinet, or grow slot, or whatever.
+            
         }
     }
 }

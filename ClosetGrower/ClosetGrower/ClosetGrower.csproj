@@ -90,8 +90,10 @@
     <Compile Include="GameObjects\Tools\Lights\CompactFlourescentLightStripTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\BaseMediumTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\HydroponicMediumTool.cs" />
-    <Compile Include="GameObjects\Tools\Mediums\Copy of PHBalancedSoilTool.cs" />
+    <Compile Include="GameObjects\Tools\Mediums\InertMediumTool.cs" />
     <Compile Include="GameObjects\Tools\Mediums\PHBalancedSoilTool.cs" />
+    <Compile Include="GameObjects\Tools\Nutrients\BaseNutrientTool.cs" />
+    <Compile Include="GameObjects\Tools\Nutrients\MiracleGrow.cs" />
     <Compile Include="GameObjects\Tools\Seeds\BaseSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\LaughingBuddhaSeedTool.cs" />
     <Compile Include="GameObjects\Tools\Seeds\WhiteWidowSeedTool.cs" />
