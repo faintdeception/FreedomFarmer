@@ -10,8 +10,8 @@ namespace FreedomFarmer.GameObjects
 {
     public class VisualGameObject : BaseGameObject
     {
-        public VisualGameObject(Game game)
-            : base(game)
+        public VisualGameObject(Game game, Vector2 start)
+            : base(game, start)
         {
             // TODO: Construct any child components here
         }
@@ -27,9 +27,7 @@ namespace FreedomFarmer.GameObjects
         public void Update(
             GameTime gameTime,
             KeyboardState keyboardState,
-            GamePadState gamePadState,
-            AccelerometerState accelState,
-            DisplayOrientation orientation)
+            GamePadState gamePadState)
         {
             base.Update(gameTime);
         }

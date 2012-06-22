@@ -10,8 +10,8 @@ namespace FreedomFarmer.GameObjects.Tools.Mediums
 {
     public class BaseMediumTool : BaseGameObject, IUseableTool
     {
-        public BaseMediumTool(Game game)
-            : base(game)
+        public BaseMediumTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }

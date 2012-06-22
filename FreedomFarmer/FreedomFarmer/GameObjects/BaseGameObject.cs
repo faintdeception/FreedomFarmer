@@ -1,13 +1,14 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace FreedomFarmer.GameObjects
 {
     public class BaseGameObject : Microsoft.Xna.Framework.GameComponent
     {
-        public BaseGameObject(Game game)
+        public BaseGameObject(Game game, Vector2 start)
             : base(game)
         {
-            // TODO: Construct any child components here
+            
         }
 
         /// <summary>
@@ -27,9 +28,12 @@ namespace FreedomFarmer.GameObjects
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            // TODO: Add your update code here
-
             base.Update(gameTime);
-        }        
+        }
+        
+
+
+        
+        
     }
 }

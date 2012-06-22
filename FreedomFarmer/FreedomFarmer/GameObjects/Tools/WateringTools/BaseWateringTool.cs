@@ -8,8 +8,8 @@ namespace FreedomFarmer.GameObjects.Tools.WateringTools
 {
     public class BaseWateringTool : BaseGameObject, IUseableTool
     {
-        public BaseWateringTool(Game game)
-            : base(game)
+        public BaseWateringTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }

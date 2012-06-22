@@ -11,8 +11,8 @@ namespace FreedomFarmer.GameObjects.Tools.Mediums
 {
     public class InertMediumTool : BaseMediumTool
     {
-        public InertMediumTool(Game game)
-            : base(game)
+        public InertMediumTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }
@@ -21,7 +21,7 @@ namespace FreedomFarmer.GameObjects.Tools.Mediums
         {
             base.Use(useWithThis);
             BasePot p = useWithThis as BasePot;
-            p.AddGrowMedium(new InertMedium(this.Game));
+            p.AddGrowMedium(new InertMedium(this.Game, new Vector2(0,0)));
         }
     }
 }

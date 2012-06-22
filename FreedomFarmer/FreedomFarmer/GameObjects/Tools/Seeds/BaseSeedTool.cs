@@ -8,8 +8,8 @@ namespace FreedomFarmer.GameObjects.Tools.Seeds
     public class BaseSeedTool : BaseGameObject, IUseableTool
     {
 
-        public BaseSeedTool(Game game)
-            : base(game)
+        public BaseSeedTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }

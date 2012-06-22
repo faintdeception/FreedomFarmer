@@ -15,8 +15,8 @@ namespace FreedomFarmer.GameObjects.Pots
         [DefaultValue(0.000)]
         protected double MoistureAbsorbtionRate { get; set; }
 
-        public BasePot(Game game)
-            : base(game)
+        public BasePot(Game game, Vector2 start)
+            : base(game, start)
         {
             FreedomFarmerGame cg = (FreedomFarmerGame)game;
             cg.DayIncrimented += new DayIncrimentedEventHandler(Game_DayIncrimented);

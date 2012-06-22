@@ -9,8 +9,8 @@ namespace FreedomFarmer.GameObjects.Tools.Lights
 {
     public class CompactFlourescentLightStripTool : BaseLightTool
     {
-       public CompactFlourescentLightStripTool(Game game)
-           : base(game)
+       public CompactFlourescentLightStripTool(Game game, Vector2 start)
+           : base(game, start)
        {
           
        }

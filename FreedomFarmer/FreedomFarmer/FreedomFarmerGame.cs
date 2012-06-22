@@ -8,6 +8,8 @@ using FreedomFarmer.GameObjects.Mediums;
 using FreedomFarmer.GameObjects.Tools.Mediums;
 using FreedomFarmer.GameObjects.Tools.WateringTools;
 using FreedomFarmer.GameObjects.WaterSources;
+using FreedomFarmer.GameObjects;
+using System.IO;
 
 namespace FreedomFarmer
 {
@@ -21,6 +23,11 @@ namespace FreedomFarmer
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         int currentDay;
+
+        private int levelIndex = -1;
+        private const int numberOfLevels = 1;
+
+        Closet _closet;
 
         // An event that clients can use to be notified whenever the
         // elements of the list change.
@@ -74,19 +81,19 @@ namespace FreedomFarmer
 
             //Create a pot.
             //Later on we'll have a pot tool that can be used to add a pot to your grow slot.
-            ClayPot myClayPot = new ClayPot(this);
+            ClayPot myClayPot = new ClayPot(this, new Vector2(0,0));
 
             //Create a soil tool.  Going to use ph balanced soil here.
-            PHBalancedSoilTool mySoil = new PHBalancedSoilTool(this);
+            PHBalancedSoilTool mySoil = new PHBalancedSoilTool(this, new Vector2(0,0));
 
             //Create a white widow seed.
-            WhiteWidowSeedTool myWhiteWidowSeedTool = new WhiteWidowSeedTool(this);
+            WhiteWidowSeedTool myWhiteWidowSeedTool = new WhiteWidowSeedTool(this, new Vector2(0,0));
 
             //Create an empty soda bottle tool.  It's a low capacity bottle that dispenses a tiny amount of water.
-            EmptySodaBottleTool myEmptySodaBottle = new EmptySodaBottleTool(this) { RemainingWater = 1.0 };
+            EmptySodaBottleTool myEmptySodaBottle = new EmptySodaBottleTool(this, new Vector2(0,0)) { RemainingWater = 1.0 };
 
             //Create a water source, my sink, don't have a purifier yet.
-            SinkWaterSource mySink = new SinkWaterSource(this) { Quality = 0.5 };
+            SinkWaterSource mySink = new SinkWaterSource(this, new Vector2(0,0)) { Quality = 0.5 };
 
             //Use the soil tool with the pot to add soil to the pot.
             mySoil.Use(myClayPot);
@@ -101,6 +108,7 @@ namespace FreedomFarmer
             myEmptySodaBottle.Use(mySink);
 
 
+            LoadNextLevel();
             // TODO: use this.Content to load your game content here
         }
 
@@ -137,9 +145,13 @@ namespace FreedomFarmer
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.OrangeRed);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            _closet.Draw(gameTime, spriteBatch);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
@@ -148,6 +160,27 @@ namespace FreedomFarmer
         {
             this.currentDay++;
             OnDayIncrimented(EventArgs.Empty);
+        }
+
+        private void LoadNextLevel()
+        {
+            // move to the next level
+            levelIndex = (levelIndex + 1) % numberOfLevels;
+
+            // Unloads the content for the current level before loading the next one.
+            if (_closet != null)
+                _closet.Dispose();
+
+            // Load the level.
+            string s = Directory.GetCurrentDirectory();
+
+            string levelPath = string.Format("Content/Levels/{0}.txt", levelIndex);
+            if (File.Exists(levelPath))
+            {
+                using (Stream fileStream = TitleContainer.OpenStream(levelPath))
+                    _closet = new Closet(this, new Vector2(0,0), Services, fileStream, levelIndex);
+            }
+
         }
     }
 }

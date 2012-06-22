@@ -6,8 +6,8 @@ namespace FreedomFarmer.GameObjects.Plants
 {
     public class BasePlant : VisualGameObject
     {
-        public BasePlant(Game game)
-            : base(game)
+        public BasePlant(Game game, Vector2 start)
+            : base(game, start)
         {
             FreedomFarmerGame cg = (FreedomFarmerGame)game;
             cg.DayIncrimented += new DayIncrimentedEventHandler(Game_DayIncrimented);

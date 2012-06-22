@@ -6,8 +6,8 @@ namespace FreedomFarmer.GameObjects.Tools.WateringTools
 {
     public class EmptySodaBottleTool : BaseWateringTool
     {
-        public EmptySodaBottleTool(Game game)
-            : base(game)
+        public EmptySodaBottleTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }

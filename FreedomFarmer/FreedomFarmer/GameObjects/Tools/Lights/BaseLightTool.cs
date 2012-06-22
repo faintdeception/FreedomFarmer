@@ -9,8 +9,8 @@ namespace FreedomFarmer.GameObjects.Tools.Lights
 {
     public class BaseLightTool : BaseGameObject, IUseableTool
     {
-        public BaseLightTool(Game game)
-            : base(game)
+        public BaseLightTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }

@@ -11,8 +11,8 @@ namespace FreedomFarmer.GameObjects.Tools.Nutrients
     public class BaseNutrientTool : BaseGameObject, IUseableTool
     {
 
-        public BaseNutrientTool(Game game)
-            : base(game)
+        public BaseNutrientTool(Game game, Vector2 start)
+            : base(game, start)
         {
             
         }

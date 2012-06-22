@@ -8,8 +8,8 @@ namespace FreedomFarmer.GameObjects.WaterSources
 {
     public class SinkWaterSource : BaseWaterSource
     {
-        public SinkWaterSource(Game game)
-            : base(game)
+        public SinkWaterSource(Game game, Vector2 start)
+            : base(game, start)
         {
             this.Quality = 0.5;
         }

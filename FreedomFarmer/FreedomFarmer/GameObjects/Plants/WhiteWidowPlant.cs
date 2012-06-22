@@ -5,8 +5,8 @@ namespace FreedomFarmer.GameObjects.Plants
 {
     class WhiteWidowPlant : BasePlant
     {
-        public WhiteWidowPlant(Game game)
-            : base(game)
+        public WhiteWidowPlant(Game game, Vector2 start)
+            : base(game, start)
         {
             this.MoistureAbsorbtionRate = .08;
         }

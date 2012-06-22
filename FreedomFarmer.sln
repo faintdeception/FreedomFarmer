@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreedomFarmer", "FreedomFarmer\FreedomFarmer\FreedomFarmer.csproj", "{9C7D5DBA-024C-4150-A683-A6814FEE7054}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "FreedomFarmerContent", "FreedomFarmer\FreedomFarmerContent\FreedomFarmerContent.contentproj", "{28377C16-F8B6-45A1-8E11-665EE19337CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content", "FreedomFarmer\Content\Content.contentproj", "{28377C16-F8B6-45A1-8E11-665EE19337CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

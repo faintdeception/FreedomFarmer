@@ -5,8 +5,8 @@ namespace FreedomFarmer.GameObjects.Mediums
 {
     public class BaseMedium : BaseGameObject
     {
-        public BaseMedium(Game game)
-            : base(game)
+        public BaseMedium(Game game, Vector2 start)
+            : base(game, start)
         {            
             
         }

@@ -5,8 +5,8 @@ namespace FreedomFarmer.GameObjects.WaterSources
 {
     public class BaseWaterSource : BaseGameObject
     {
-        public BaseWaterSource(Game game)
-            : base(game)
+        public BaseWaterSource(Game game, Vector2 start)
+            : base(game, start)
         {
             this.Output = .1;
         }

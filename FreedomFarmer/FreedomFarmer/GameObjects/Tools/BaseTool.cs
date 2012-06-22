@@ -5,8 +5,8 @@ namespace FreedomFarmer.GameObjects.Tools
 {
     public class BaseTool : VisualGameObject, IUseableTool
     {
-        public BaseTool(Game game)
-            : base(game)
+        public BaseTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }

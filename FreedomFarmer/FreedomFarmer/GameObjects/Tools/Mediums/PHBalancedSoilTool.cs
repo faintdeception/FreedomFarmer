@@ -11,8 +11,8 @@ namespace FreedomFarmer.GameObjects.Tools.Mediums
 {
     public class PHBalancedSoilTool : BaseMediumTool
     {
-        public PHBalancedSoilTool(Game game)
-            : base(game)
+        public PHBalancedSoilTool(Game game, Vector2 start)
+            : base(game, start)
         {
 
         }
@@ -21,7 +21,7 @@ namespace FreedomFarmer.GameObjects.Tools.Mediums
         {
             base.Use(useWithThis);
             BasePot p = useWithThis as BasePot;
-            p.AddGrowMedium(new PHBalancedSoil(this.Game));
+            p.AddGrowMedium(new PHBalancedSoil(this.Game, new Vector2(0,0)));
         }
     }
 }

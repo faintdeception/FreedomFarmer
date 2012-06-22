@@ -11,8 +11,8 @@ namespace FreedomFarmer.GameObjects.Seeds
     class PlantedSeedObject : VisualGameObject
     {
         FreedomFarmerGame cg;
-        public PlantedSeedObject(Game game, BasePlant plant)
-            : base(game)
+        public PlantedSeedObject(Game game, BasePlant plant, Vector2 start)
+            : base(game, start)
         {
             this.Plant = plant;
             cg = (FreedomFarmerGame)game;

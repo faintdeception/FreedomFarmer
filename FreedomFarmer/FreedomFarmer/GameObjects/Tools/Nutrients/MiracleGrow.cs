@@ -12,8 +12,8 @@ namespace FreedomFarmer.GameObjects.Tools.Nutrients
     /// </summary>
     public class MiracleGrow : BaseNutrientTool
     {
-        public MiracleGrow(Game game)
-            : base(game)
+        public MiracleGrow(Game game, Vector2 start)
+            : base(game, start)
         {
             this.Ph = .5;
             this.NutritionValue = .01;
