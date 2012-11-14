@@ -19,6 +19,15 @@ namespace FreedomFarmer.GameObjects.Plants
         [DefaultValue(0.20)]
         public double MoistureAbsorbtionRate { get; set; }
 
+        [DefaultValue(0.20)]
+        public double NutrientIntakeRate { get; set; }
+
+        [DefaultValue(0.5)]
+        public double MoistureLevel { get; set; }
+
+        [DefaultValue(0.0)]
+        public double NutrientLevel { get; set; }
+
         public virtual void Game_DayIncrimented(object sender, EventArgs e)
         {
             //The logic for plants is probably going to be pretty complex, but basically it's going to feed, and then it's going to grow.

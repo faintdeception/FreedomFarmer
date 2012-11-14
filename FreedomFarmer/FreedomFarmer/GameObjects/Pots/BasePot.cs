@@ -38,6 +38,7 @@ namespace FreedomFarmer.GameObjects.Pots
                 if (this.Plant != null)
                 {
                     this.Medium.Humdity -= this.Plant.MoistureAbsorbtionRate;
+                    this.Medium.NutritionLevel -= this.Plant.NutrientIntakeRate;
                 }
             }
 
