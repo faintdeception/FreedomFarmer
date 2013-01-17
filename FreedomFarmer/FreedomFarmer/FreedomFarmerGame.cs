@@ -87,7 +87,7 @@ namespace FreedomFarmer
             PHBalancedSoilTool mySoil = new PHBalancedSoilTool(this, new Vector2(0,0));
 
             //Create a white widow seed.
-            WhiteWidowSeedTool myWhiteWidowSeedTool = new WhiteWidowSeedTool(this, new Vector2(0,0));
+            WaterMelonSeedTool myWhiteWidowSeedTool = new WaterMelonSeedTool(this, new Vector2(0,0));
 
             //Create an empty soda bottle tool.  It's a low capacity bottle that dispenses a tiny amount of water.
             EmptySodaBottleTool myEmptySodaBottle = new EmptySodaBottleTool(this, new Vector2(0,0)) { RemainingWater = 1.0 };

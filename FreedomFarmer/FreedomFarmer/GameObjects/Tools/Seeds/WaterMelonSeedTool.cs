@@ -6,9 +6,9 @@ using Microsoft.Xna.Framework;
 
 namespace FreedomFarmer.GameObjects.Tools.Seeds
 {
-    public class WhiteWidowSeedTool : BaseSeedTool
+    public class WaterMelonSeedTool : BaseSeedTool
     {
-        public WhiteWidowSeedTool(Game game, Vector2 start)
+        public WaterMelonSeedTool(Game game, Vector2 start)
             : base(game, start)
         {
 
@@ -18,7 +18,7 @@ namespace FreedomFarmer.GameObjects.Tools.Seeds
         {
             base.Use(useWithThis);
             BasePot p = useWithThis as BasePot;
-            p.PlantSeed(new PlantedWhiteWidowSeed(this.Game, new WhiteWidowPlant(this.Game, new Vector2(0,0)), new Vector2(0,0)));            
+            p.PlantSeed(new PlantedWaterMelonSeed(this.Game, new WaterMelonPlant(this.Game, new Vector2(0,0)), new Vector2(0,0)));            
         }
     }
 }

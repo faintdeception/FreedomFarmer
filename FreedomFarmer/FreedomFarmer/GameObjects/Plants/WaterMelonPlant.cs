@@ -3,9 +3,9 @@ using System;
 
 namespace FreedomFarmer.GameObjects.Plants
 {
-    class WhiteWidowPlant : BasePlant
+    class WaterMelonPlant : BasePlant
     {
-        public WhiteWidowPlant(Game game, Vector2 start)
+        public WaterMelonPlant(Game game, Vector2 start)
             : base(game, start)
         {
             this.MoistureAbsorbtionRate = .08;
